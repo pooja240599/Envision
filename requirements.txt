@@ -3,6 +3,7 @@ pandas
 os
 base64
 PyPDF2
-matplotlib.pyplot
+matplotlib
 spacy
 re
+
