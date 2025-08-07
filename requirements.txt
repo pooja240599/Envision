@@ -1,9 +1,7 @@
 streamlit
 pandas
-os
-base64
 PyPDF2
 matplotlib
 spacy
-re
+
 
