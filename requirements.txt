@@ -1,0 +1,8 @@
+streamlit
+pandas
+os
+base64
+PyPDF2
+matplotlib.pyplot
+spacy
+re
