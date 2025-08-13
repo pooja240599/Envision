@@ -96,14 +96,16 @@ def calculate_emissions(inputs):
 def classify_emission_reduction(baseline, project):
     reduction = baseline - project
     percent_reduction = (reduction / baseline) * 100 if baseline > 0 else 0
-    if percent_reduction < 5:
+    if percent_reduction < 10:
         level = "No Improvement"
-    elif percent_reduction < 15:
+    elif percent_reduction >= 10 and percent_reduction < 25:
         level = "Improved"
-    elif percent_reduction < 30:
+    elif percent_reduction >= 25 and percent_reduction < 50:
         level = "Enhanced"
-    elif percent_reduction < 50:
+    elif percent_reduction >= 50 and percent_reduction < 100:
         level = "Superior"
+    elif percent_reduction == 100:
+        level = "Conserving"
     else:
         level = "Restorative"
     return percent_reduction, level
