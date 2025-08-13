@@ -66,14 +66,14 @@ if st.checkbox("📋 Show Assessment Checklist Table",key="show_assessment_table
         # Style cells based on Status and Points
         def style_cells(val):
             if isinstance(val, int):
-                if val <= 5:
+                if val < 5:
                     return "background-color: #f44336; color: white; font-weight: bold; text-align: center"
                 else:
                     return "background-color: #4CAF50; color: white; font-weight: bold; text-align: center"
             elif isinstance(val, str):
-                if val.lower() in ["no improvement", "improved"]:
+                if val.lower() in ["no improvement"]:
                     return "background-color: #e57373; color: white; font-weight: bold; text-align: center"
-                elif val.lower() in ["enhanced", "superior", "restorative"]:
+                elif val.lower() in ["improved", "enhanced", "superior","conserving", "restorative"]:
                     return "background-color: #81C784; color: white; font-weight: bold; text-align: center"
             return "text-align: center"
 
